@@ -1,0 +1,20 @@
+{
+  "name": "instantsearch-stackoverflow",
+  "version": "1.0.0",
+  "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Shipow <kevin@algolia.com>",
+  "license": "MIT",
+  "private": true
+}

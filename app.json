@@ -1,0 +1,7 @@
+{
+  "name": "instantsearch-stackoverflow",
+  "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
+  "repository": "https://github.com/shipow/instantsearch-stackoverflow",
+  "logo": "",
+  "keywords": ["stackoverflow", "algolia", "instantsearch"]
+}

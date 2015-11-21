@@ -1,0 +1,40 @@
+<!doctype html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset='utf-8'>
+      <meta content='ie=edge' http-equiv='x-ua-compatible'>
+        <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+          <title>Foundation for Sites</title>
+          <link href='css/app.css' rel='stylesheet'>
+        </meta>
+      </meta>
+    </meta>
+  </head>
+  <body>
+    <div class='row'>
+      <div class='large-12 columns'>
+        <h1>Algolia at StackOverflow</h1>
+        <p>Welcome to our StackOverflow page, where we maintain a list of StackOverflow tags that our engineering team monitors and participates in.</p>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-3 columns'>
+        <div id='q'></div>
+        <div id='facets'>
+          <div id='accepted'></div>
+          <div id='tags'></div>
+          <div id='answersAuthor'></div>
+        </div>
+      </div>
+      <div class='large-9 columns'>
+        <div id='hits'></div>
+        <div id='pagination'></div>
+      </div>
+    </div>
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/what-input/what-input.js'></script>
+    <script src='bower_components/foundation-sites/dist/foundation.js'></script>
+    <script src='//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js'></script>
+    <script src='js/app.js'></script>
+  </body>
+</html>
