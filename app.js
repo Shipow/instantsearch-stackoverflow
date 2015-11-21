@@ -1,9 +1,13 @@
+//---------------------------------------------------
+// Simple Node app to serve static content for heroku
+// --------------------------------------------------
+
 var finalhandler = require('finalhandler')
 var http = require('http')
 var serveStatic = require('serve-static')
 
-// Serve up public/ftp folder
-var serve = serveStatic('./', {'index': ['index.html', 'index.htm']})
+// Serve up /public folder
+var serve = serveStatic('./', {'index': ['index.html']})
 
 // Create server
 var server = http.createServer(function(req, res){

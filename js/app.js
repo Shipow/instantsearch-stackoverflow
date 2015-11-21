@@ -1,13 +1,11 @@
 $(document).foundation();
-/* global instantsearch, $ */
-'use strict';
-$(document).foundation();
 
+var config = require('public');
 
 var search = instantsearch({
-  appId: process.env.ALGOLIA_APP_ID,
-  apiKey: process.env.ALGOLIA_SEARCH_KEY,
-  indexName: 'instantsearch-so-' + process.env.STACKOVERFLOW_KEYWORD
+  appId: config.algolia.appID,
+  apiKey: config.algolia.searchKey,
+  indexName: 'instantsearch-so-' + config.stackoverflow.keyword
 });
 
 search.addWidget(

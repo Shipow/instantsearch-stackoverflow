@@ -3,20 +3,17 @@ var _ = require('lodash');
 var phantom = require('x-ray-phantom');
 var Xray = require('x-ray');
 
+var config = require('../config/admin.js')
 
 var x = new Xray();
 var xphan = new Xray().driver(phantom());
 
-var soKeyword = process.env.STACKOVERFLOW_KEYWORD;
-var algoliaAppId = process.env.ALGOLIA_APP_ID;
-var algoliaWriteKey = process.env.ALGOLIA_WRITE_KEY;
-
-var client = algoliasearch(algoliaAppId, algoliaWriteKey);
-var index = client.initIndex('instantsearch-so-'+ soKeyword);
+var client = algoliasearch(config.algolia.appID, config.algolia.writeKey);
+var index = client.initIndex('instantsearch-so-'+ config.stackoverflow.keyword);
 
 client.setRequestTimeout(3600000);
 
-xphan('http://stackoverflow.com/search?tab=newest&q=' + soKeyword + '+is%3Aquestion', '.result-link', [{
+xphan('http://stackoverflow.com/search?tab=newest&q=' + config.stackoverflow.keyword + '+is%3Aquestion', '.result-link', [{
   href: 'a@href'
 }])
 .paginate('a[rel="next"]@href')
