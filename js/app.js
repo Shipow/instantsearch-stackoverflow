@@ -5,9 +5,9 @@ $(document).foundation();
 
 
 var search = instantsearch({
-  appId: 'T2ZX9HO66V',
-  apiKey: '7119d2f6f1cd95224251ec2e490e824f',
-  indexName: 'dev_stackoverflow'
+  appId: process.env.ALGOLIA_APP_ID,
+  apiKey: process.env.ALGOLIA_SEARCH_KEY,
+  indexName: 'instantsearch-so-' + process.env.STACKOVERFLOW_KEYWORD
 });
 
 search.addWidget(
