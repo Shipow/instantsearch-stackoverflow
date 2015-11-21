@@ -12,7 +12,8 @@
     "gulp-webserver": "^0.9.1"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "node app.js",
+    "dev": "gulp"
   },
   "author": "Shipow <kevin@algolia.com>",
   "license": "MIT",
