@@ -4,14 +4,17 @@
 
 ### Set env var
 
-### Notes
-- heroku belt
+Create an algolia account and choose which keywork on StackOverflow you want to index.
 
+### Init Index
+
+visit /grab
+
+### Notes
+```heroku git:remote -a YOUR_HEROKU_APP_NAME```
 
 ## Run locally
 
-npm install
-
-npm run postinstall
-
-npm run dev
+```npm install```
+```npm run postinstall```
+```npm start```
