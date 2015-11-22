@@ -1,5 +1,5 @@
 var scrapper = function() {
-
+  console.log('Start scrap');
   var algoliasearch = require('algoliasearch');
   var _ = require('lodash');
   var Xray = require('x-ray');
@@ -63,12 +63,12 @@ var scrapper = function() {
       tags: x('.post-taglist',['a']),
       answerAccepted: '.answer.accepted-answer@data-answerid',
       comments: x('.comment',[{
-        text: '.comment-copy@html',
+        // text: '.comment-copy@html',
         author: '.comment-user',
         authorUrl: '.comment-user@href'
       }]),
       answers: x('.answer',[{
-        text: '.post-text@html',
+        // text: '.post-text@html',
         accepted: '.vote-accepted-on',
         author: '.user-details a',
         authorUrl: '.user-details a@href',
