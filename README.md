@@ -1,3 +1,11 @@
+# StackOverflow powered by instantsearch.js
+
+This app grabs all content for a tag and builds a search engine with faceted navigation.
+Then it runs cron to keep it up to date.
+
+Demo [https://is-so-test.herokuapp.com/]
+
+
 ## The heroku way
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
