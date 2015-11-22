@@ -7,7 +7,7 @@ var express = require('express')
 
 var config = require('./config/public.js')
 
-var scrap = require('./scrap/stackoverflow-questions.js').Request
+var scrap = require('./scrap/stackoverflow-questions.js')
 
 var app = express();
 

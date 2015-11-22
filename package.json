@@ -8,10 +8,9 @@
     "bower": "^1.6.5",
     "cron": "^1.0.9",
     "express": "^4.13.3",
-    "http": "0.0.0",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
-    "x-ray": "^2.0.2",
+    "x-ray": "git://github.com/lapwinglabs/x-ray.git#bugfix/nested-crawling",
     "x-ray-phantom": "^1.0.1"
   },
   "devDependencies": {
