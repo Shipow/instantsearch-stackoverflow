@@ -1,1 +1,2 @@
-https://github.com/lbesson/heroku-buildpack-phantomjs-nodejs.git
+https://github.com/heroku/heroku-buildpack-nodejs.git
+https://github.com/stomita/heroku-buildpack-phantomjs.git
