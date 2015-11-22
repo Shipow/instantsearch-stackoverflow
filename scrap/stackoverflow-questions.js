@@ -43,7 +43,7 @@ var scrapper = function() {
     "highlightPostTag":"</em>",
     "typoTolerance":"true" };
 
-  index.setSettings(settings, function(err) {});
+  index.setSettings(settings);
 
   var numberPattern = /\d+/g;
 
