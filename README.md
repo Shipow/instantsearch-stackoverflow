@@ -1,9 +1,10 @@
 # StackOverflow powered by instantsearch.js
 
 This app grabs all content for a tag and builds a search engine with faceted navigation.
+
 Then it runs cron to keep it up to date.
 
-Demo [https://is-so-test.herokuapp.com/]
+Demo https://is-so-test.herokuapp.com/
 
 
 ## The heroku way
@@ -16,16 +17,19 @@ Create an algolia account and choose which keywork on StackOverflow you want to 
 
 ### Init Index
 
-visit /grab
-Grab a coffee...
-... done!
-Visit /
+- visit /grab
+- Grab a coffee...
+- ... done!
+- Visit /
 
 ### Notes
+
+Add heroku to your git clone of this repo
+
 ```heroku git:remote -a YOUR_HEROKU_APP_NAME```
 
 ## Run locally
 
-```npm install```
-```npm run postinstall```
-```npm start```
+- ```npm install```
+- ```npm run postinstall```
+- ```npm start```
