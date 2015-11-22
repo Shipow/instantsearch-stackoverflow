@@ -2,7 +2,6 @@
 // Simple Node app to serve static content for heroku
 // --------------------------------------------------
 
-var http = require('http')
 var express = require('express')
 
 var config = require('./config/public.js')
