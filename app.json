@@ -4,11 +4,6 @@
   "repository": "https://github.com/shipow/instantsearch-stackoverflow",
   "logo": "https://raw.githubusercontent.com/Shipow/instantsearch-stackoverflow/master/public/img/stackoverflow.png",
   "keywords": ["stackoverflow", "algolia", "instantsearch"],
-  "buildpacks": [
-    {
-      "url": "https://github.com/ddollar/heroku-buildpack-multi"
-    }
-  ],
   "env": {
     "ALGOLIA_APP_ID": {
       "generator": null
