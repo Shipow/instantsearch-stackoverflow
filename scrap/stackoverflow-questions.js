@@ -3,6 +3,7 @@ var scrapper = function() {
   var algoliasearch = require('algoliasearch');
   var _ = require('lodash');
   var Xray = require('x-ray');
+  var async = require('async');
 
   var config = require('../config/admin.js')
 
@@ -77,22 +78,25 @@ var scrapper = function() {
     }])
   }])
   .paginate('.pager a[rel="next"]@href')
+  //.write('scrap/questions.json');
+
   (function(err, data) {
     console.log(data.length);
     _.forEach(data, function(item,k){
-      // console.log(data[k].question);
       data[k] = item.question[0];
       data[k].href = item.question[0].href;
       data[k].date = Date.parse(item.question[0].date);
       data[k].nbViews = parseInt((item.question[0].nbViews).match( numberPattern )) || 0;
     });
-    index.addObjects(data, function(err) {
+    // split our results into chunks of 200 objects, to get a good indexing/insert performance
+    var chunkedResults = _.chunk(data, 200);
+    async.each(chunkedResults, index.saveObjects.bind(index), end);
+    function end(err) {
       if (err) {
-        console.error("ERROR: %s", err);
-        return false;
+        throw err;
       }
-      console.log('indexed');
-    });
+      console.log('Algolia import done')
+    };
   });
 };
 
