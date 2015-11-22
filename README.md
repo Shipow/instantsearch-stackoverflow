@@ -9,6 +9,9 @@ Create an algolia account and choose which keywork on StackOverflow you want to 
 ### Init Index
 
 visit /grab
+Grab a coffee...
+... done!
+Visit /
 
 ### Notes
 ```heroku git:remote -a YOUR_HEROKU_APP_NAME```

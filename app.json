@@ -11,7 +11,7 @@
     "ALGOLIA_SEARCH_KEY": {
       "value": null
     },
-    "ALGOLIA_ADMIN_KEY": {
+    "ALGOLIA_WRITE_KEY": {
       "value": null
     },
     "STACKOVERFLOW_KEYWORD": {
