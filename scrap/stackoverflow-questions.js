@@ -15,7 +15,6 @@ var RequestClass = function() {
 
   client.setRequestTimeout(3600000);
 
-
   var settings = {"minWordSizefor1Typo":4,
   "minWordSizefor2Typos":8,
   "hitsPerPage":20,
