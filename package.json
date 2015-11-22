@@ -4,8 +4,8 @@
   "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
   "main": "gulpfile.js",
   "engines": {
-    "node": "0.10.21",
-    "npm": "1.3.11"
+    "node": "<0.10.21",
+    "npm": "<1.3.11"
   },
   "dependencies": {
     "algoliasearch": "^3.9.2",
