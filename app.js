@@ -4,16 +4,18 @@
 
 var finalhandler = require('finalhandler')
 var http = require('http')
-var serveStatic = require('serve-static')
+var express = require('express')
 
-// Serve up /public folder
-var serve = serveStatic('./', {'index': ['index.html']})
+var config = require('./config/public.js')
 
-// Create server
-var server = http.createServer(function(req, res){
-  var done = finalhandler(req, res)
-  serve(req, res, done)
-})
+var app = express();
 
-// Listen
-server.listen(process.env.PORT || 5000)
+app.set('view engine', 'jade');
+
+app.use(express.static('public'));
+
+app.get('/', function (req, res) {
+  res.render('index', { config: config});
+});
+
+app.listen(process.env.PORT || 5000, function() { console.log('listening')});

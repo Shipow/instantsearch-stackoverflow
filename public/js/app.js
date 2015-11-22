@@ -1,7 +1,5 @@
 $(document).foundation();
 
-var config = require('public');
-
 var search = instantsearch({
   appId: config.algolia.appID,
   apiKey: config.algolia.searchKey,

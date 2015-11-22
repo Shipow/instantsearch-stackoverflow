@@ -1,0 +1,31 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(content='ie=edge', http-equiv='x-ua-compatible')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    title instantsearch StackOverflow
+    link(href='css/app.css', rel='stylesheet')
+  body
+    .row
+      .large-12.columns
+        h1 #{config.stackoverflow.keyword} at StackOverflow
+        p
+          | Welcome to our StackOverflow page, where we maintain a list of StackOverflow tags that our engineering team monitors and participates in.
+    .row
+      .large-3.columns
+        #q
+        #facets
+          #accepted
+          #tags
+          #answersAuthor
+      .large-9.columns
+        #hits
+        #pagination
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/what-input/what-input.js')
+    script(src='/bower_components/foundation-sites/dist/foundation.js')
+    script(src='//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js')
+    script.
+      var config = !{JSON.stringify(config)};
+    script(src='js/app.js')
