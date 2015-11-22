@@ -8,11 +8,9 @@
     "bower": "^1.6.5",
     "cron": "^1.0.9",
     "express": "^4.13.3",
-    "finalhandler": "^0.4.0",
     "http": "0.0.0",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
-    "serve-static": "^1.10.0",
     "x-ray": "^2.0.2",
     "x-ray-phantom": "^1.0.1"
   },
