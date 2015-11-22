@@ -2,13 +2,12 @@ var scrapper = function() {
 
   var algoliasearch = require('algoliasearch');
   var _ = require('lodash');
-  var phantom = require('x-ray-phantom');
   var Xray = require('x-ray');
 
   var config = require('../config/admin.js')
 
   var x = new Xray();
-  var xphan = new Xray().driver(phantom());
+  // var xphan = new Xray().driver(phantom());
 
   var client = algoliasearch(config.algolia.appID, config.algolia.writeKey);
   client.setRequestTimeout(3600000);
@@ -47,7 +46,7 @@ var scrapper = function() {
 
   var numberPattern = /\d+/g;
 
-  xphan('http://stackoverflow.com/search?tab=newest&q=' + config.stackoverflow.keyword + '+is%3Aquestion&pagesize=50', '.result-link', [{
+  x('http://stackoverflow.com/search?tab=newest&q=' + config.stackoverflow.keyword + '+is%3Aquestion&pagesize=50', '.result-link', [{
     href: 'a@href',
     question: x('a@href', '#content', [{
       title: 'h1',
@@ -81,7 +80,7 @@ var scrapper = function() {
   (function(err, data) {
     console.log(data.length);
     _.forEach(data, function(item,k){
-      console.log(data[k].question);
+      // console.log(data[k].question);
       data[k] = item.question[0];
       data[k].href = item.question[0].href;
       data[k].date = Date.parse(item.question[0].date);
