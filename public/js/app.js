@@ -3,13 +3,15 @@ $(document).foundation();
 var search = instantsearch({
   appId: config.algolia.appID,
   apiKey: config.algolia.searchKey,
-  indexName: 'instantsearch-so-' + config.stackoverflow.keyword
+  indexName: 'instantsearch-so-' + config.stackoverflow.keyword,
+  urlSync: {}
 });
 
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#q',
-    placeholder: 'Search a question'
+    placeholder: 'Search a question',
+    poweredBy: true
   })
 );
 

@@ -1,13 +1,13 @@
 {
-  "name": "foundation-sites-template",
+  "name": "instantsearch-stackoverflow",
   "version": "1.0.0",
   "authors": [
-    "ZURB <foundation@zurb.com>"
+    "Shipow <kevin@algolia.com>"
   ],
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
   "main": "index.html",
   "license": "MIT",
-  "homepage": "http://foundation.zurb.com",
+  "homepage": "https://github.com/shipow/instantsearch-stackoverflow",
   "dependencies": {
     "foundation-sites": "zurb/foundation-sites-6#develop",
     "motion-ui": "~1.1.0"

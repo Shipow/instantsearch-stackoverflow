@@ -9,7 +9,9 @@ html.no-js(lang='en')
   body
     .row
       .large-12.columns
-        h1 #{config.stackoverflow.keyword} at StackOverflow
+        h1
+          img(src='img/stackoverflow.png', width=50)
+          | #{config.stackoverflow.keyword} at StackOverflow
         p
           | Welcome to our StackOverflow page, where we maintain a list of StackOverflow tags that our engineering team monitors and participates in.
     .row

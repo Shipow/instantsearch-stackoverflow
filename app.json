@@ -2,6 +2,6 @@
   "name": "instantsearch-stackoverflow",
   "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
   "repository": "https://github.com/shipow/instantsearch-stackoverflow",
-  "logo": "https://raw.githubusercontent.com/Shipow/instantsearch-stackoverflow/master/img/stackoverflow.png",
+  "logo": "https://raw.githubusercontent.com/Shipow/instantsearch-stackoverflow/master/public/img/stackoverflow.png",
   "keywords": ["stackoverflow", "algolia", "instantsearch"]
 }
