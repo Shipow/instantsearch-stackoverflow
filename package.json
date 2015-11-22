@@ -10,6 +10,7 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
+    "phantomjs": "^1.9.18",
     "x-ray": "git://github.com/lapwinglabs/x-ray.git#bugfix/nested-crawling",
     "x-ray-phantom": "^1.0.1"
   },
