@@ -2,10 +2,9 @@
   "name": "instantsearch-stackoverflow",
   "version": "1.0.0",
   "description": "Boilerplate for StackOverflow powered by Algolia's instantsearch.js",
-  "main": "gulpfile.js",
   "engines": {
-    "node": "<0.10.21",
-    "npm": "<1.3.11"
+    "node": "4.1.1",
+    "npm": "2.1.x"
   },
   "dependencies": {
     "algoliasearch": "^3.9.2",
