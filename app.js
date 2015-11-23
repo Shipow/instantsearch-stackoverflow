@@ -10,13 +10,8 @@ var scrap = require('./scrap/stackoverflow-questions.js')
 
 var CronJob = require('cron').CronJob;
 
-var job = new CronJob('* * */2 * * *', scrap, function () {
-    console.log('cron end');
-  },
-  true, /* Start the job right now */
-  'America/Los_Angeles'
-);
-
+// set cron job every hour
+var job = new CronJob('00 00 * * * *', scrap, true, 'America/Los_Angeles');
 
 var app = express();
 
