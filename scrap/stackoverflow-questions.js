@@ -50,7 +50,7 @@ var scrapper = function() {
 
   x('http://stackoverflow.com/search?tab=newest&q=' + config.stackoverflow.keyword + '+is%3Aquestion&pagesize=50', '.result-link', [{
     href: 'a@href',
-    question: x('a@href', '#content', [{
+    question: x('a@href', '#content .inner-content', [{
       title: 'h1',
       objectID: '.question@data-questionid',
       text: '.post-text@html',
