@@ -83,6 +83,7 @@ var scrapper = function() {
 
   (function(err, data) {
     console.log(data.length);
+    data = data.filter(function (item) { return !!item.question[0]; });
     _.forEach(data, function(item,k){
       data[k] = item.question[0];
       data[k].href = item.question[0].href;
