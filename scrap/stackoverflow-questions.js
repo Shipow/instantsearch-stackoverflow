@@ -9,6 +9,7 @@ var scrapper = function() {
 
   var x = new Xray();
   // var xphan = new Xray().driver(phantom());
+  x.throttle(1, 2000);
 
   var client = algoliasearch(config.algolia.appID, config.algolia.writeKey);
   client.setRequestTimeout(3600000);
