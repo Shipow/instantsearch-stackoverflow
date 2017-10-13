@@ -88,15 +88,40 @@ search.addWidget(
 
 search.addWidget(
   instantsearch.widgets.refinementList({
+    container: '#answered',
+    attributeName: 'withAnswer',
+    operator: 'and',
+    cssClasses: {
+      active: 'active'
+    },
+    templates: {
+      header: '<div class="facet-title">Answered</div>'
+    },
+    transformData: {
+      item: function (data) {
+        data.name = data.highlighted = data.name === 'true' ? 'Answered' : 'Unanswered';
+        return data;
+      }
+    }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
     container: '#accepted',
-    attributeName: 'answers.accepted',
-    operator: 'or',
-    limit: 10,
+    attributeName: 'withAcceptedAnswer',
+    operator: 'and',
     cssClasses: {
       active: 'active'
     },
     templates: {
       header: '<div class="facet-title">Accepted</div>'
+    },
+    transformData: {
+      item: function (data) {
+        data.name = data.highlighted = data.name === 'true' ? 'Accepted' : 'Not accepted';
+        return data;
+      }
     }
   })
 );
