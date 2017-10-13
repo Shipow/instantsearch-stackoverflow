@@ -31,5 +31,4 @@ Add heroku to your git clone of this repo
 ## Run locally
 
 - ```npm install```
-- ```npm run postinstall```
 - ```npm start```
