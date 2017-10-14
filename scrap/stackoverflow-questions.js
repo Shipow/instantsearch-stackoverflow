@@ -9,6 +9,7 @@ var scrapper = function() {
 
   var x = new Xray();
   // var xphan = new Xray().driver(phantom());
+  x.throttle(1, 2000);
 
   var client = algoliasearch(config.algolia.appID, config.algolia.writeKey);
   client.setRequestTimeout(3600000);
@@ -29,7 +30,7 @@ var scrapper = function() {
     "unretrievableAttributes":null,
     "optionalWords":null,
     "slaves":[],
-    "attributesForFaceting":["tags","answers.accepted","answers.author"],
+    "attributesForFaceting":["tags","withAcceptedAnswer","withAnswer","answers.author"],
     "attributesToSnippet":["text:60"],
     "attributesToHighlight":null,
     "attributeForDistinct":null,
@@ -49,7 +50,7 @@ var scrapper = function() {
 
   x('http://stackoverflow.com/search?tab=newest&q=' + config.stackoverflow.keyword + '+is%3Aquestion&pagesize=50', '.result-link', [{
     href: 'a@href',
-    question: x('a@href', '#content', [{
+    question: x('a@href', '#content .inner-content', [{
       title: 'h1',
       objectID: '.question@data-questionid',
       text: '.post-text@html',
@@ -82,11 +83,15 @@ var scrapper = function() {
 
   (function(err, data) {
     console.log(data.length);
+    data = data.filter(function (item) { return !!item.question[0]; });
     _.forEach(data, function(item,k){
-      data[k] = item.question[0];
-      data[k].href = item.question[0].href;
-      data[k].date = Date.parse(item.question[0].date);
-      data[k].nbViews = parseInt((item.question[0].nbViews).match( numberPattern )) || 0;
+      question = item.question[0];
+      data[k] = question;
+      data[k].href = question.href;
+      data[k].date = Date.parse(question.date);
+      data[k].nbViews = parseInt((question.nbViews).match( numberPattern )) || 0;
+      data[k].withAnswer = (question.answers || []).length > 0;
+      data[k].withAcceptedAnswer = (question.answers || []).some(function (answer) { return answer.accepted });
     });
     // split our results into chunks of 200 objects, to get a good indexing/insert performance
     var chunkedResults = _.chunk(data, 200);
