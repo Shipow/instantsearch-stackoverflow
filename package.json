@@ -5,7 +5,7 @@
   "dependencies": {
     "algoliasearch": "^3.9.2",
     "async": "^1.5.0",
-    "bower": "^1.6.5",
+    "bower": "^1.8.8",
     "cron": "^1.0.9",
     "express": "^4.13.3",
     "jade": "^1.11.0",
