@@ -9,7 +9,7 @@
     "cron": "^1.0.9",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.21",
     "x-ray": "git://github.com/lapwinglabs/x-ray.git#bugfix/nested-crawling"
   },
   "devDependencies": {
