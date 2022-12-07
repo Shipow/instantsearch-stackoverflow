@@ -7,7 +7,7 @@
     "async": "^1.5.0",
     "bower": "^1.8.8",
     "cron": "^1.0.9",
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "jade": "^1.11.0",
     "lodash": "^4.17.13",
     "x-ray": "git://github.com/lapwinglabs/x-ray.git#bugfix/nested-crawling"
